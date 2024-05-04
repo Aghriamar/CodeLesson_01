@@ -1,11 +1,32 @@
 ﻿// CodeLesson_01.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
+#include <string>
 #include <iostream>
+
+void compareNumbers(int num1, int num2)
+{
+    if (num1 < num2) {
+        std::cout << "The first number is less than the second one." << std::endl;
+    }
+    else if (num1 > num2) {
+        std::cout << "The first number is greater than the second one." << std::endl;
+    }
+    else {
+        std::cout << "The numbers are equal." << std::endl;
+    }
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int num1, num2;
+
+    std::cout << "Enter first number: ";
+    std::cin >> num1;
+    std::cout << "Enter second number: ";
+    std::cin >> num2;
+    compareNumbers(num1, num2);
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
